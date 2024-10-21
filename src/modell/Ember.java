@@ -31,6 +31,10 @@ public class Ember {
     public int getSzul_ev() {
         return szul_ev;
     }
+    
+    public int getKor() {
+        return 2024-szul_ev;
+    }
 
     public String[] getNyelvek() {
         String[] ny = new String[nyelvek.size()]; // üres tömb
@@ -53,7 +57,8 @@ public class Ember {
     }
 
     public String bemutatkozas() {
-        String s = nev + " vagyok";
+        String s = nev + " vagyok, anyanyelvem: " + nyelvek.get(0);
+        int kor = 2024-this.getSzul_ev();
         
         return "Ember{" + "nev=" + nev + ", szul_ev=" + szul_ev + ", nyelvek=" + nyelvek + '}';
     }
